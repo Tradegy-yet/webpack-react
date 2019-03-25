@@ -1,20 +1,22 @@
 
 import ReactDOM from "react-dom";
-const element = require("../components/Greeter");
+import React from "react";
+function getGreeting(user){
+  if(user){
+    return <h1>hello,{user}!</h1>
+  }
+  return <h1>hello,stranger!</h1>
+}
+const element = (
+  <h1>
+    hello,world!
+  </h1>
+)
 ReactDOM.render(
   element,
   document.getElementById('root')
 );
 
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-
-// import Greeter from '../components/Greeter.jsx';
-
-// ReactDOM.render(<Greeter />, document.getElementById('root'))
 
 
-// var greet = document.createElement("div")
-// greet.textContent = "hello world!"
-// document.querySelector("#root").appendChild(greet)
 
