@@ -8,9 +8,12 @@ class Handle{
   }
 }
 function outputObject(controller){
-  let properties = Object.getOwnPropertyNames(controller)
-  let object = {}
+  // 获取controller对象实例的属性
+  let properties = Object.getOwnPropertyNames(controller);
+  let object = {};
+  // 遍历对象的实例属性
   for(let handle of properties){
+    // 获取实例属性对象的属性，包装成一个json对象
     let pro_url = controller[handle].url
     let pro_method = controller[handle].method
     let pro_handle = controller[handle].handle

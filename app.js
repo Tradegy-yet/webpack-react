@@ -6,7 +6,6 @@ const routerController = require("./router-controller");
 const koaStatic = require('koa-static');
 
 const app = new Koa();
-
 // 相对于 app.js 的路径
 const staticPath = path.join( __dirname,'./public');
 // console.log(staticPath)
@@ -26,4 +25,4 @@ app.use(async (ctx,next)=>{
   await next();
 });
 app.listen(3000);
-console.log("app started at post 3000");
+console.log("app started at port 3000");
